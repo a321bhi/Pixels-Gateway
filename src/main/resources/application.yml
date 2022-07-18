@@ -10,3 +10,9 @@ spring:
             allowed-origins: "*"
             allowed-methods: "*"
             allowed-headers: "*"
+application:
+  jwt:
+    secretKey: veryverysecureveryverysecureveryverysecure
+    tokenExpirationAfterDays: 1
+    tokenPrefix: Bearer
+            
