@@ -1,7 +1,7 @@
 FROM openjdk:17
 
-COPY target/pixels-mediaservice-1.jar pixels-mediaservice.jar
+COPY target/pixels-gateway-1.jar pixels-gateway.jar
 
-EXPOSE 8101
+EXPOSE 8081
 
-ENTRYPOINT ["java","-jar","pixels-mediaservice.jar"]
+ENTRYPOINT ["java","-jar","pixels-gateway.jar"]
