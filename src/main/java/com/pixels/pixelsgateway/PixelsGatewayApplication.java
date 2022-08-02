@@ -10,8 +10,9 @@ import org.springframework.context.annotation.Bean;
 public class PixelsGatewayApplication {
 
 	private String userServiceUrl = "http://localhost:8090";
-	private String feedServiceUrl = "http://localhost:8102";
+	private String storyServiceUrl = "http://localhost:8102";
 	private String chatServiceUrl = "http://localhost:8103";
+	private String mediaServiceUrl = "http://localhost:8101";
 
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
@@ -19,12 +20,15 @@ public class PixelsGatewayApplication {
 				.route(r -> r.path("/user/**")
 						//.filters(f -> f.setResponseHeader("Access-Control-Allow-Origin", "http://localhost:8081"))
 						.uri(userServiceUrl))
-				.route(r -> r.path("/feed/**")
+				.route(r -> r.path("/story/**")
 						//.filters(f -> f.setResponseHeader("Access-Control-Allow-Origin", "http://localhost:8081"))
-						.uri(feedServiceUrl))
+						.uri(storyServiceUrl))
 				.route(r -> r.path("/chat/**")
 						//.filters(f -> f.setResponseHeader("Access-Control-Allow-Origin", "http://localhost:8081"))
 						.uri(chatServiceUrl))
+				.route(r -> r.path("/service/**")
+						//.filters(f -> f.setResponseHeader("Access-Control-Allow-Origin", "http://localhost:8081"))
+						.uri(mediaServiceUrl))
 				.build();
 	}
 

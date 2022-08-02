@@ -56,5 +56,13 @@ public class ErrorResponseDTO implements Serializable {
 		this.details = details;
 		this.path = path;
 	}
+	public ErrorResponseDTO(Date timestamp, int status, String error, String path) {
+		super();
+		this.timestamp = timestamp;
+		this.status = status;
+		this.error = error;
+		this.path = path;
+	}
+
     
 }
