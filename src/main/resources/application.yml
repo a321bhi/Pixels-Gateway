@@ -19,7 +19,6 @@ application:
 spring:
    application:
       name: pixelgateway
-spring:
    client:
       registerWithEureka: true
       fetchRegistry: true
