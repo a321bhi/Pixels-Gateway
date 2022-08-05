@@ -10,17 +10,15 @@ spring:
             allowed-origins: "*"
             allowed-methods: "*"
             allowed-headers: "*"
+  application:
+    name: pixelgateway
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: registration-eureka/eureka
 application:
   jwt:
     secretKey: veryverysecureveryverysecureveryverysecure
     tokenExpirationAfterDays: 1
     tokenPrefix: Bearer
-    
-spring:
-   application:
-      name: pixelgateway
-   client:
-      registerWithEureka: true
-      fetchRegistry: true
-      serviceUrl:
-         defaultZone: registration-eureka/eureka
