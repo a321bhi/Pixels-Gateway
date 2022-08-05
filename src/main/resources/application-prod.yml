@@ -15,9 +15,8 @@ application:
     secretKey: ${JWT-SECRET-KEY}
     tokenExpirationAfterDays: ${JWT-EXPIRATION-DAYS}
     tokenPrefix: Bearer
-application:
-   microservice:
-      user: ${USER-MICROSERVICE-URL}
-      story: ${STORY-MICROSERVICE-URL}
-      chat: ${CHAT-MICROSERVICE-URL}
-      media: ${MEDIA-MICROSERVICE-URL}
+  microservice:
+    user: ${USER-MICROSERVICE-URL}
+    story: ${STORY-MICROSERVICE-URL}
+    chat: ${CHAT-MICROSERVICE-URL}
+    media: ${MEDIA-MICROSERVICE-URL}
