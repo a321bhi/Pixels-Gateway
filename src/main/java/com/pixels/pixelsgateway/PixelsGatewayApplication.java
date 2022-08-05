@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class PixelsGatewayApplication {
-	private String userServiceUrl = "http://localhost:8090";
-	private String storyServiceUrl = "http://localhost:8102";
-	private String chatServiceUrl = "http://localhost:8103";
-	private String mediaServiceUrl = "http://localhost:8101";
+	private String userServiceUrl = "http://pixels-story-microservice";
+	private String storyServiceUrl = "http://pixels-chat-microservice";
+	private String chatServiceUrl = "http://pixels-media-microservice";
+	private String mediaServiceUrl = "http://pixels-user-microservice";
 
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
