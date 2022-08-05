@@ -12,12 +12,12 @@ spring:
             allowed-headers: "*"
 application:
   jwt:
-    secretKey: veryverysecureveryverysecureveryverysecure
-    tokenExpirationAfterDays: 1
+    secretKey: ${JWT-SECRET-KEY}
+    tokenExpirationAfterDays: ${JWT-EXPIRATION-DAYS}
     tokenPrefix: Bearer
 application:
    microservice:
-      user: "http://localhost:8090"
-      story: "http://localhost:8102"
-      chat: "http://localhost:8103"
-      media: "http://localhost:8101"
+      user: ${USER-MICROSERVICE-URL}
+      story: ${STORY-MICROSERVICE-URL}
+      chat: ${CHAT-MICROSERVICE-URL}
+      media: ${MEDIA-MICROSERVICE-URL}
