@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "*"
+            allowed-methods: "*"
+            allowed-headers: "*"
+application:
+  jwt:
+    secretKey: veryverysecureveryverysecureveryverysecure
+    tokenExpirationAfterDays: 1
+    tokenPrefix: Bearer
+  microservice:
+    user: ${USER-MICROSERVICE-URL}
+    story: ${STORY-MICROSERVICE-URL}
+    chat: ${CHAT-MICROSERVICE-URL}
+    media: ${MEDIA-MICROSERVICE-URL}
