@@ -1,5 +1,6 @@
 package com.pixels.pixelsgateway;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -8,10 +9,14 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class PixelsGatewayApplication {
-	private String userServiceUrl = "http://pixels-story-microservice";
-	private String storyServiceUrl = "http://pixels-chat-microservice";
-	private String chatServiceUrl = "http://pixels-media-microservice";
-	private String mediaServiceUrl = "http://pixels-user-microservice";
+	@Value("${application.serviceurl.userservice}")
+	private String userServiceUrl;
+	@Value("${application.serviceurl.storyservice}")
+	private String storyServiceUrl;
+	@Value("${application.serviceurl.chatservice}")
+	private String chatServiceUrl;
+	@Value("${application.serviceurl.mediaservice}")
+	private String mediaServiceUrl;
 
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {

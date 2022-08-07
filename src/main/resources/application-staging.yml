@@ -10,15 +10,14 @@ spring:
             allowed-origins: "*"
             allowed-methods: "*"
             allowed-headers: "*"
-  application:
-    name: pixelgateway
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-        defaultZone: http://eureka-server/eureka
 application:
   jwt:
     secretKey: veryverysecureveryverysecureveryverysecure
     tokenExpirationAfterDays: 1
     tokenPrefix: Bearer
+  serviceurl:
+    userservice: pixels-user-microservice:8090
+    storyservice: pixels-story-microservice:8102
+    chatservice: pixels-chat-microservice:8103
+    mediaservice: pixels-media-microservice:8101
+    
