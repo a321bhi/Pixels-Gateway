@@ -1,23 +1,7 @@
-server:
-  port: 8081
-
-spring:
-  cloud:
-    gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowed-origins: "*"
-            allowed-methods: "*"
-            allowed-headers: "*"
 application:
-  jwt:
-    secretKey: veryverysecureveryverysecureveryverysecure
-    tokenExpirationAfterDays: 1
-    tokenPrefix: Bearer
   serviceurl:
-    userservice: pixels-user-microservice:8090
-    storyservice: pixels-story-microservice:8102
-    chatservice: pixels-chat-microservice:8103
-    mediaservice: pixels-media-microservice:8101
+    userservice: http://pixels-user-microservice:8090
+    storyservice: http://pixels-story-microservice:8102
+    chatservice: http://pixels-chat-microservice:8103
+    mediaservice: http://pixels-media-microservice:8101
     

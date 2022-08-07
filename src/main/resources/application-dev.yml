@@ -1,20 +1,4 @@
-server:
-  port: 8081
-
-spring:
-  cloud:
-    gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowed-origins: "*"
-            allowed-methods: "*"
-            allowed-headers: "*"
 application:
-  jwt:
-    secretKey: veryverysecureveryverysecureveryverysecure
-    tokenExpirationAfterDays: 1
-    tokenPrefix: Bearer
   serviceurl:
     userservice: http://localhost:8090
     storyservice: http://localhost:8102
